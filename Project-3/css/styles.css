@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background: url(./../assets/bg.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+nav {
+    display: flex;
+    background-color: black;
+    padding: 20px 80px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    color: white;
+}
+
+nav ul li {
+    list-style: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+nav ul li:hover {
+    text-decoration: underline;
+    font-weight: 800;
+}
+
+.logo {
+    margin-right: 30px;
+    padding-right: 70px;
+    border-right: 1px solid white;
+}
+
+.button {
+    background-color: rgb(233, 73, 206);
+    padding: 10px 30px;
+    border-radius: 7px;
+    color: white;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+section {
+    height: 86vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 30px;
+}
+
+.description {
+    width: 80vw;
+    color: white;
+}
+
+section div h1 {
+    /* display: inline-block; */
+    font-size: 70px;
+    margin-left: 350px;
+}
+
+section div p {
+    font-size: 30px;
+    display: inline-block;
+    margin-left: 400px;
+}
+
+.access {
+    font-size: 30px;
+    border: 1px solid rgb(233, 73, 206);
+    margin-left: 70px;
+}
