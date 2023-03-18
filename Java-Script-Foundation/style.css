@@ -1,0 +1,72 @@
+/* PASSWORD VALIDATOR */
+
+#one {
+    display: inline-flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+#enter-password {
+    display: flex;
+    column-gap: 35px;
+}
+
+#confirm-password {
+    display: flex;
+    column-gap: 16px;
+}
+
+/* CALCULATOR */
+
+.two {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    row-gap: 25px;
+}
+
+#res {
+    border: 2px solid black;
+    margin-top: 25px;
+    height: 30px;
+    width: 85px;
+}
+
+/* Color Mixer */
+
+.three {
+    display: inline-flex;
+    flex-direction: column;
+    margin-top: 25px;
+    row-gap: 25px;
+}
+
+#print-color {
+    display: flex;
+    border: 2px solid black;
+    height: 25px;
+    width: 100%;
+}
+
+/* Highest Marks */
+
+#marks-submit{
+    margin-top: 20px;
+    margin-left: 25px;
+}
+
+.highest-marks {
+    border: 2px solid black;
+    height: 20px;
+    width: 80px;
+    margin: 20px 0 20px 15px;
+}
+
+/* Vowel Counter */
+
+#vowel-output {
+    border: 2px solid black;
+    height: 20px;
+    width: 30px;
+    margin-top: 25px;
+}
