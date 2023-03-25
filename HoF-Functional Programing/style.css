@@ -1,0 +1,30 @@
+.unioutput {
+    height: 20px;
+    width: 200px;
+    border: 1px solid black;
+}
+
+#strout {
+    margin: 20px 0 0 80px;
+}
+
+#randnum {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+#priceout{
+    margin-top: 20px;
+}
+
+#filtercap {
+    margin-top: 20px;
+}
+
+#urlout {
+    margin: 20px 0 0 65px;
+}
+
+#lurlout {
+    margin: 20px 0 0 65px;
+}
