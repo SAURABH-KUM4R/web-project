@@ -1,3 +1,19 @@
+button {
+    border-radius: 7px;
+    padding: 10px 20px;
+    border: 1px solid #4e51f3;
+    background-color: #4e51f3;
+    color: white;
+    cursor: pointer;
+}
+
+.unioutput {
+    border: 1px solid black;
+    height: 20px;
+    width: 100px;
+    margin-top: 20px
+}
+
 /* PASSWORD VALIDATOR */
 
 #one {
@@ -70,3 +86,63 @@
     width: 30px;
     margin-top: 25px;
 }
+
+/* Remove Duplicates */
+
+#get-cart {
+    height: 20px;
+    width: 200px;
+    border: 1px solid black;
+    margin-top: 20px;
+}
+#show-cart {
+    margin-top: 20px;
+}
+
+/* Divisiblity Check */
+
+#divout {
+    border: 1px solid black;
+    height: 20px;
+    width: 100px;
+}
+
+#out13 {
+    width: 300px;
+}
+
+.unioutput1 {
+    border: 1px solid black;
+    height: 20px;
+    width: 300px;
+    margin-top: 20px
+}
+
+.unioutput2 {
+    border: 1px solid black;
+    height: 400px;
+    width: 300px;
+    margin-top: 20px
+}
+
+/* Scroll indicator*/
+
+.twentyTow {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: #f1f1f1;
+  }
+  
+  .progress-container {
+    width: 100%;
+    height: 8px;
+    background: #ccc;
+  }
+
+  .progress-bar {
+    height: 8px;
+    background: #04AA6D;
+    width: 0%;
+  }
