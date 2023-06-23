@@ -1,0 +1,4 @@
+const fs = require('fs');
+const data = "First of all, Node.js is a lightweight runtime. It uses an asynchronous, event-driven I/O model which ensures that almost no function in Node.js directly performs I/O. This time-saving operation cuts down the time developers spend on deploying an application.Node.js offers both client-side and server-side in JavaScript. It means that applications written in Node.js require fewer files and less code as developers can reuse it for the frontend and backend parts of an application. As a result, your development team delivers faster results and you can cut down on personnel hours by hiring a team of full-stack developers — instead of separately bringing on a frontend and backend developer(s)."
+const file_name = "nodejs_architecture.txt";
+fs.appendFileSync(file_name,data);

@@ -1,0 +1,15 @@
+{
+  "name": "first-node-project",
+  "version": "1.0.0",
+  "description": "Ye hai mera pehla node project thank you",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SAURABH-KUM4R/web-project/tree/main/Java-Script-Foundation"
+  },
+  "author": "Saurabh Kumar(Azaad)",
+  "license": "ISC"
+}
