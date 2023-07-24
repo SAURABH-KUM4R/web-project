@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #fafafa;
+            font-family: Arial, sans-serif;
+        }
+        .output {
+            border: 1px solid black;
+            background-color: white;
+            height: 75vh;
+            width: 50vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        img {
+            height: 20vh;
+            width: 20vh;
+            border-radius: 100px;
+            margin: 0px;
+        }
+        p {
+            margin: 0;
+        }
+        .username {
+            font-size: 25px;
+            margin: 10px 0 20px 0;
+            font-weight: bold;
+        }
+        .bio {
+            text-align: center;
+            font-size: 16px;
+            margin: 0 0 20px 0;
+        }
+        .email {
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <h1>Home Page</h1>
+    <div class="output">
+        <img src="https://e1.pxfuel.com/desktop-wallpaper/903/679/desktop-wallpaper-97-aesthetic-best-profile-pic-for-instagram-for-boy-instagram-dp-boys.jpg" alt="">
+        <p id="userName" class="username"></p>
+        <p id="userBio" class="bio"></p>
+        <p id="userEmail" class="email"></p>
+    </div>
+    <script>
+        const get_data = async () => {
+            const resp = await fetch("http://localhost:5001",{
+            method:"GET",
+            credentials:"include"
+            });
+            const { data } = await resp.json();
+            document.getElementById("userName").innerText = data.username
+            document.getElementById("userEmail").innerText = data.email
+            document.getElementById("userBio").innerText = data.bio;
+        }
+        get_data();
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <style>
+
+
+    body {
+        height: 95vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        background-color: #fafafa;
+        font-family: Arial, sans-serif;
+    }
+
+    .inputBox {
+        border: 1px solid black;
+        background-color: #fdfdfd;
+        display: flex;
+        flex-direction: column;
+        height: 80vh;
+        width: 60vw;
+        align-items: center;
+        justify-content: center;
+    }
+
+    input {
+        background-color: rgb(241, 237, 237);
+        height: 30px;
+        width: 500px;
+        margin: 0px 0px 15px 0px;
+        border-radius: 6px;
+        padding: 5px;
+    }
+    button {
+        height: 40px;
+        background-color: #3897f0;
+        cursor: pointer;
+        width: 400px;
+        margin: 20px 0px 15px 0px;
+        border-radius: 6px;
+        color: white;
+        font-size: 20px;
+    }
+    button:hover {
+        background-color:  #208df3;
+    }
+    .t8 {
+        margin: 0px 400px 0px 0px;
+    } 
+    .t5 {
+        margin: 0px 450px 0px 0px;
+    } 
+    </style>
+</head>
+<body>
+    <div class="inputBox">
+        <h1>Instagram SignUp</h1>
+        <span><h3 class="t5">Name</h3></span>
+        <input type="text" id="name" placeholder="name">
+
+        <span><h3 class="t8">Username</h3></span>
+        <input type="text" id="username" placeholder="username">
+
+        <span><h3 class="t5">Bio</h3></span>
+        <input type="text" id="bio" placeholder="bio">
+
+        <span><h3 class="t5">Email</h3></span>
+        <input type="text" id="email" placeholder="email">
+
+        <span><h3 class="t8">Password</h3></span>
+        <input type="text" id="password" placeholder="password">
+        <button id="Submit">Submit</button>
+    </div>
+    <script>
+        var button = document.getElementById("Submit");
+        button.addEventListener("click", () => {
+            var name = document.getElementById("name").value;
+            var username = document.getElementById("username").value;
+            var bio = document.getElementById("bio").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var output = document.getElementById("out1");
+            const result = {
+                name:name,
+                username:username,
+                bio:bio,
+                email:email,
+                password:password
+            }
+            console.log(result);
+            fetch("http://localhost:5001/signup",{
+                method: "POST",
+                credentials:"include",
+            redirect:"follow",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(result)
+            }).then((response) =>{
+                response.json().then((data) => {
+                    if (data.message == "User created Sucessfully") {
+                        window.location.href = "http://127.0.0.1:5500/frontend/login.html"
+                    }else{
+                        alert(data.message)
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+</html>

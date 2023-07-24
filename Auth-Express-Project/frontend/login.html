@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+    .output {
+        margin-top: 20px;
+        height: 100px;
+        width: 300px;
+    }
+    
+    body{
+        height: 95vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        background-color: #fafafa;
+        font-family: Arial, sans-serif;
+    }
+
+    .inputDiv {
+        border: 1px solid black;
+        background-color: #f7f3f3;
+        display: flex;
+        flex-direction: column;
+        height: 60vh;
+        width: 60vw;
+        align-items: center;
+        justify-content: center;
+    }
+    input {
+        background-color: rgb(241, 237, 237);
+        height: 30px;
+        width: 500px;
+        margin: 0px 0px 15px 0px;
+        border-radius: 6px;
+        padding: 5px;
+    }
+    button {
+        height: 40px;
+        background-color: #3897f0;
+        cursor: pointer;
+        width: 400px;
+        margin: 0px 0px 15px 0px;
+        border-radius: 6px;
+        color: white;
+        font-size: 20px;
+    }
+    button:hover {
+        background-color:  #208df3;
+    }
+    a {
+        margin-left: 20px;
+    }
+    h3 {
+        margin: 0px 400px 4px 0px;
+    }
+    </style>
+</head>
+<body>
+    <div class="inputDiv">
+        <h1>Instagram LogIn</h1>
+        <span><h3>Username</h3></span>
+        <input type="text" placeholder="username" id="username">
+        <span><h3>Password</h3></span>
+        <input type="text" placeholder="password" id="password">
+        <button id="Submit">Log In</button>
+        <div class="anchor">
+            <a href="#">Forgot Password?</a>
+            <a href="http://127.0.0.1:5500/frontend/signup.html">Sign Up</a>
+        </div>
+    </div>
+    <div class="output" id="out1"></div>
+    <script>
+        var button = document.getElementById("Submit");
+        button.addEventListener("click", async () => {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var output = document.getElementById("out1");
+            const result = {
+                username:username,
+                password:password
+            }
+            await fetch("http://localhost:5001/signin",{
+                method: "POST",
+                credentials:"include",
+                headers: {
+                    "Content-Type" : "application/JSON"
+                },
+                body: JSON.stringify(result)
+            }).then((response) => {
+                response.json().then((data) => {
+                    output.innerText = data.message;
+                    if (data.message == "Login sucessfully") {
+                        window.location.href = "http://127.0.0.1:5500/frontend/home.html"
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+</html>
