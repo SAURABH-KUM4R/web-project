@@ -1,0 +1,34 @@
+:root {
+    background-color: #99f0f3;
+}
+
+#root{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about {
+    background-color: #5053ff;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    column-gap: 50px;
+    width: 75rem;
+    border-radius: 7px;
+}
+
+.details {
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 30px;
+    word-wrap: break-word;
+    padding: 20px;
+    color: white;
+}
+
+.details p {
+    font-weight: 600;
+}

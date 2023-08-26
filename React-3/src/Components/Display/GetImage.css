@@ -1,0 +1,20 @@
+.display {
+    display: grid;
+    grid-template-columns: repeat(4,0fr);
+    justify-content: center;
+    background-color: violet;
+}
+
+.imgDiv{
+    border: 1px solid black;
+    padding: 10px;
+    background-color: #c7c1c1;
+    border-radius: 7px;
+    margin: 20px;
+}
+
+img {
+    height: 17rem;
+    width: 20rem;
+    border-radius: 7px;
+}
