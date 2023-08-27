@@ -1,0 +1,10 @@
+:root {
+    background-color: #68a6f7;
+}
+
+.homePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}

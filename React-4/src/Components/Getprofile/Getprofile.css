@@ -1,0 +1,21 @@
+.profiles {
+    display: grid;
+    grid-template-columns: repeat(5,2fr);
+    justify-content: center;
+    column-gap: 30px;
+}
+
+img {
+    border-radius: 7px;
+    width: 15rem;
+    height: 15rem;
+}
+
+.avtar {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 7px;
+    background-color: #a19c9c;
+    color: white;
+    font-size: 20px;
+}
