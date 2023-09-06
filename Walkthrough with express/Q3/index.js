@@ -6,15 +6,16 @@ const host = 'localhost';
 const app = express();
 
 app.get('/',(req,res) => {
-    res.send('I am Homepage');
+    res.json({msg:'I am Homepage'})
 })
 
 app.get('/about',(req,res) => {
-    res.send('I am about Page');
+    res.json({msg:'I am about Page'})
+
 })
 
 app.get('/contact',(req,res) => {
-    res.send('suppor@pwskills.com')
+    res.json({msg:'suppor@pwskills.com'})
 })
 
 app.listen(port,()=>{
